@@ -8,4 +8,3 @@ def analyse():
         values = " ".join(str(i) for i in a_list)
         print(values)
         outfile.write(values + "\n")
-analyse()
