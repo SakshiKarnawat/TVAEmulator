@@ -1,5 +1,7 @@
-from analyse import analyse
 from monitor import monitor
 
-monitor()
-analyse()
+def main():
+    monitor()
+
+if __name__ == "__main__":
+    main()

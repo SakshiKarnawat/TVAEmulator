@@ -1,15 +1,21 @@
 from random import *
+from analyse import analyse
+
+
+"""
+    TO DO: make the range bigger for the random number, and the 'bad' value range smaller
+    so the program doesn't get killed right away
+"""
 def monitor():
-    n = 0
-    while (n < 20):
+
+    monitoring = True
+    while (monitoring):
         count = (randint(1, 10))
-        if (count >= 4):
-            if (count < 8):
-                print (" Good value",count)
-            else:
-                 print(" Bad value", count)
+        if (count >= 3):
+            print("Good value: {}".format(count))
         else:
-            print(" Bad value", count)
-        n+= 1
+            print("Bad value: {}".format(count))
+            analyse()
+            monitoring = False
 
 
