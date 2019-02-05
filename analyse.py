@@ -1,5 +1,5 @@
 from random import *
-
+import csv
 
 """
     TO DO: this function should call the DBMF functions that I provided for you in the email. If you need help
@@ -13,9 +13,12 @@ def analyse():
 
  columns = 10
  rows = 10
- with open("random_num.csv", "w") as outfile:
+ with open("random_num.csv", "w") as csv_file:
+    #csv_reader = csv.DictReader(csv_file)
     for x in range(rows):
-        a_list = [randint(1,10) for i in range(columns)]
-        values = " ".join(str(i) for i in a_list)
+        a_list = [randint(1,9) for i in range(columns)]
+        values = 'Latency values: ' + " ".join(str(i) for i in a_list)
         print(values)
-        outfile.write(values + "\n")
+
+        csv_file.write(values + "\n")
+

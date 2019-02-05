@@ -1,5 +1,6 @@
 from random import *
 from analyse import analyse
+from read import read
 
 
 """
@@ -16,6 +17,8 @@ def monitor():
         else:
             print("Bad value: {}".format(count))
             analyse()
+            print("Read values")
+            read()
             monitoring = False
 
 
