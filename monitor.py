@@ -17,7 +17,6 @@ def monitor():
         else:
             print("Bad value: {}".format(count))
             analyse()
-            print("Read values")
             read()
             monitoring = False
 

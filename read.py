@@ -5,4 +5,4 @@ def read():
     reader = csv.reader(csv_file)
 
     for row in reader:
-        print(" ".join(row[:2]))
+        print("Read " + " ".join(row[:2]))
