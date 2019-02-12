@@ -1,8 +1,6 @@
 import numpy as np
-import random
 import pandas as pd
 from numpy.random import multivariate_normal
-from scipy.stats import wishart
 
 from utilities import Normal_Wishart  # this gives a symmetric matrix
 

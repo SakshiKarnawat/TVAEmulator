@@ -1,4 +1,6 @@
 from random import *
+import pandas as pd
+import numpy as np
 import csv
 
 """
@@ -10,15 +12,23 @@ import csv
     2. Feed these values into the DBMP functions so it can do it's magic
 """
 def analyse():
+    np.random.seed(0)
+    df = pd.DataFrame(np.random.randn(5000, 3))
+    df
+    df.to_csv('example.csv', index=False)
 
- columns = 10
- rows = 10
- with open("random_num.csv", "w") as csv_file:
-    #csv_reader = csv.DictReader(csv_file)
-    for x in range(rows):
-        a_list = [randint(1,9) for i in range(columns)]
-        values = 'Latency values: ' + " ".join(str(i) for i in a_list)
-        print(values)
+    columns = 3
+    rows = 3000
 
-        csv_file.write(values + "\n")
+    with open("random_num.csv", "w") as csv_file:
+
+        for x in range(rows):
+            a_list = [randint(1,9) for i in range(columns)]
+            values =  " ".join(str(i) for i in a_list)
+            print(values)
+            csv_file.write(values + "\n")
+
+
+
+
 

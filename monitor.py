@@ -11,13 +11,12 @@ def monitor():
 
     monitoring = True
     while (monitoring):
-        count = (randint(1, 10))
+        count = (randint(1, 100))
         if (count >= 3):
             print("Good value: {}".format(count))
         else:
             print("Bad value: {}".format(count))
             analyse()
-            read()
             monitoring = False
 
 
